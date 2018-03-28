@@ -23,9 +23,11 @@ class GetUserList(View):
 
 class GetUserInfo(View):
 
-
+    @UserAuth.auth('获取用户信息')
     def get(self, request):
-
+        '''
+            user model 中有一个 level 等级说明 .如果当前用户等级低于需要获取的用户id 那么就无法获取。显示权限不够
+        '''
         return HttpResponse(UserManager.to_json(user_id = request.GET['user_id']))
 
     def post(self, request):
@@ -44,6 +46,7 @@ class GetAddUserCheckList(View):
 
 class  GetAddUserInfo(View):
 
+    @UserAuth.auth('获取添加人员信息')
     def get(self,request):
         ret = AddUserManager.to_json(add_user_id=request.GET['add_user_id'])
         return HttpResponse(ret)
@@ -54,6 +57,7 @@ class  GetAddUserInfo(View):
 
 class  GetAddUserCheck(View):
 
+    @UserAuth.auth('获取添加人员审核信息')
     def get(self,request):
         ret = ChecksManager.to_json(add_user_id=request.GET['add_user_id'])
         return HttpResponse(ret)

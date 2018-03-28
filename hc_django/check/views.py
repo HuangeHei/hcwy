@@ -14,7 +14,7 @@ class GetProcessType(View):
         ret_list = serializers.serialize('json',ProcessType.objects.all())
         return HttpResponse(ret_list)
 
-    @UserAuth.auth('获取审核流程')
+
     def post(self,request):
 
         return HttpResponse('not post')

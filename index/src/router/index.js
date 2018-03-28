@@ -11,6 +11,7 @@ import user_list from '../components/user/user_list'
 import add_user_info from '../components/user/add_user_info'
 import user_info from '../components/user/user_info'
 import add_user_check from '../components/user/add_user_check'
+import get_gps from '../components/gps/get_gps'
 
 
 Vue.use(Router)
@@ -24,7 +25,7 @@ export const routes = [
   { path: '/user/add_user_info/:add_user_id', component: add_user_info ,meta:{is_login:true},props: true},
   { path: '/user/user_info/:user_id', component: user_info ,meta:{is_login:true},props: true},
 
-
+  { path: '/attence/attence/', component: get_gps ,meta:{is_login:true},props: true},
 
 
   { path: '/', component: index,meta:{is_login:true}},

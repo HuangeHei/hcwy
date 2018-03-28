@@ -1,8 +1,8 @@
 <template>
-  <div class="login">
+  <div class="login" @keyup.enter="login">
     <el-input  class="input_height" v-model="username" placeholder="请输入账号"></el-input>
     <el-input  class="input_height" type="password" v-model="userpasswd" placeholder="请输入密码"></el-input>
-    <el-button type="primary" @click="login">登录</el-button>
+    <el-button type="primary" @click="login" >登录</el-button>
     <h1 class="warn">{{ warn }}</h1>
   </div>
 </template>
