@@ -15,7 +15,8 @@ export default {
   data () {
     return {
         gpsinfo:'',
-        ip:''
+        ip:'',
+        key:'GKLBZ-TB3R5-J7RIX-QFG74-YX4UK-7JFVX'
     }
   },
   methods:{
@@ -30,7 +31,7 @@ export default {
         console.log(response) 
     })
 
-    this.$http.get('http://api.map.baidu.com/location/ip/',{ip:this.ip,ak:"PF7EyA8EhVU4lYMHCpD2fkcRBNS12OeQ"}).then(response => {
+    this.$http.get('http://apis.map.qq.com/ws/location/v1/ip',{params:{key:this.key}}).then(response => {
         console.log(response.data)
     }, response => {  // 错误的返回
         console.log(response) 
