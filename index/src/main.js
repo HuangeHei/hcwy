@@ -7,6 +7,10 @@ import {router} from './router/index'
 import {store} from './store/store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import VueJsonp from 'vue-jsonp'
+
+
+Vue.use(VueJsonp)//"跨域Jsonp调用"
 
 Vue.use(ElementUI)
 

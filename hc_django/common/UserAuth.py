@@ -68,7 +68,7 @@ class UserAuth():
 
                         except Exception as e:
 
-                            return HttpResponse('cc')
+                            return HttpResponse('用户权限获取失败')
 
                     except Exception as e:
 
