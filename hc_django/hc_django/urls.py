@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from index import views as index_v
 from user import views as user_v
 from check import views as check_v
+from attence import views as attence_v
 
 
 urlpatterns = [
@@ -45,4 +46,9 @@ urlpatterns = [
     #check
 
     url(r'^getchecktype/', check_v.GetProcessType.as_view()),
+
+    # attence
+
+    url(r'^postattence/', attence_v.Attence.as_view()),
+
 ]

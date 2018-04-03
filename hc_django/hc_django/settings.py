@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'user',
     'project',
     'check',
+    'attence',
 ]
 
 MIDDLEWARE = [
